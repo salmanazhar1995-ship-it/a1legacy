@@ -1,0 +1,20 @@
+A1 Legacy — Industries, Dynamic Navbar/Page CMS & Consultation Form Update
+
+Deployment:
+1. Upload/replace the updated Laravel project files.
+2. Run: php artisan migrate --force
+3. Run: php artisan optimize:clear
+4. If your hosting builds frontend assets locally, upload the included public/build directory from this package.
+
+What changed:
+- Professional Industries homepage showcase replaces the old business-fit presentation.
+- New /industries listing page and /industries/{slug} detail pages.
+- Admin > Industries manages cards and detail content.
+- Admin > Pages & Navbar can create a new page/navbar tab and independently enable/disable public pages and navbar tabs.
+- Every page section can be enabled/disabled from the page editor.
+- Contact page updated to the supplied A1 Legacy AI & Automation Consultation form.
+- Consultation submissions are stored in contact_messages, shown in the Admin consultation inbox, and emailed to the configured admin contact email.
+- Client acknowledgement email remains enabled through the existing mailer.
+
+Mail requirement:
+Configure working SMTP values in .env and set the admin contact email in Website Settings. The app uses the configured contact_email first, then MAIL_FROM_ADDRESS as fallback.

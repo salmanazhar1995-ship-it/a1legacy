@@ -1,0 +1,15 @@
+A1 Legacy asset fix
+===================
+This build does NOT depend on Vite hashed URLs at runtime.
+CSS and JavaScript are bundled in resources/runtime and injected by Blade.
+
+This prevents errors such as:
+/build/assets/app-BXGW2HZw.css
+/build/assets/app-<old-hash>.css
+
+A stable copy is also available at:
+public/assets/app.css
+public/assets/app.js
+
+The old hash app-BXGW2HZw.css is included as a compatibility alias.
+Do not run npm build just to start the site. Use START_PROJECT.bat or php artisan serve.

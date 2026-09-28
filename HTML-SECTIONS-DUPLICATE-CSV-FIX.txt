@@ -1,0 +1,5 @@
+A1 Legacy update
+================
+1. Add Section: choosing "HTML Upload" now reveals the HTML file input immediately below the section type and hides irrelevant standard content/media panels.
+2. CSV industry importer: main industries and sub-industries are matched case-insensitively after whitespace normalisation, with slug fallback, so re-importing the same records updates them instead of inserting duplicates.
+3. No new migration or seeder is required for these two changes.

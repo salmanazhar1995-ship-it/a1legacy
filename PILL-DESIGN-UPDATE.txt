@@ -1,0 +1,9 @@
+A1 Legacy - Pill Design Update
+
+Updated only the product highlight/feature presentation requested in this revision.
+
+Changes:
+- Home Core Products highlights now render as compact rounded pills instead of rectangular mini-cards.
+- /products page uses the same pill presentation for consistency.
+- Pills wrap automatically on smaller screens and remain readable/responsive.
+- Existing project, CMS, admin, routes, migrations, sections and other design changes remain included from the previous complete package.

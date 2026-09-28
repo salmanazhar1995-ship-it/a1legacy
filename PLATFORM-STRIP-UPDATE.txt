@@ -1,0 +1,40 @@
+A1 Legacy Labs — Platform Strip CRUD Update
+===========================================
+
+What changed
+------------
+1. The old generic "Everything connected. Nothing manual." platform section is no longer rendered on the homepage.
+2. A dedicated Platforms module now controls the four compact platform items under the homepage dashboard image.
+3. Frontend layout matches the supplied reference direction: dashboard image first, then one slim 4-column platform strip below it.
+4. Admin sidebar now includes "Platform Strip".
+5. Platform listing uses the existing Yajra DataTables infrastructure.
+6. Admin can edit title, short description, icon, optional link, visibility and position.
+7. Admin can delete a platform and add a replacement. The layout supports a maximum of four records.
+8. Position changes automatically swap occupied positions to keep ordering simple.
+9. Seed data provides:
+   - Live AI Activity
+   - Workflow Automation
+   - APIs & Integrations
+   - A1LegacyStudio CRM
+10. PlatformSeeder seeds defaults only when the platforms table is empty, so later admin edits are not overwritten by db:seed.
+11. Empty Laravel runtime/cache directories include .gitkeep files so ZIP extraction retains them.
+
+Deployment / upgrade
+--------------------
+Existing database:
+    php artisan migrate --force
+    php artisan db:seed --force
+    php artisan optimize:clear
+
+Local development:
+    php artisan migrate --seed
+    php artisan optimize:clear
+    php artisan serve
+
+Admin URL
+---------
+    /admin/platforms
+
+Important
+---------
+Do NOT run migrate:fresh on a live database unless you intentionally want to delete all current data.

@@ -1,0 +1,8 @@
+A1 Legacy Labs — Responsive Stats + Full Platform CRUD + Business Fit CRUD
+
+Changes in this build:
+1. Homepage stats grid rebuilt to avoid the blank/grey final cell and behave cleanly on mobile, tablet and desktop.
+2. Platform Strip is now a true CRUD with no artificial four-record add lock. Add, edit, delete, hide/show and sort as needed. The frontend layout adapts automatically.
+3. Added a separate Business Fit module with Yajra DataTable CRUD, FilePond image upload, CKEditor description, repeatable AI-fit points, visibility and ordering.
+4. Added responsive interactive homepage Business Fit section: business selector on the left/top and a professional content/image panel on the right/below.
+5. Added idempotent BusinessUseCaseSeeder and homepage section seeding.

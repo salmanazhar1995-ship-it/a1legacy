@@ -1,0 +1,2 @@
+<?php echo $__env->make('site.page', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
+<?php /**PATH /home/u668568382/domains/a1legacylabs.com/laravel_app/resources/views/pages/contact.blade.php ENDPATH**/ ?>

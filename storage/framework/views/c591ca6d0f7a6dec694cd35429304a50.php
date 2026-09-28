@@ -1,0 +1,213 @@
+<?php
+    $roles = ['Founder / Owner','CEO / Managing Director','Director','Operations Manager','Sales Manager','Marketing Manager','Customer Service / Support Manager','IT / Technology','Automation / CRM Manager','Consultant / Agency','Other'];
+    $countries = ['United States','United Kingdom','Canada','Germany','France','Netherlands','Belgium','Spain','Italy','Türkiye','United Arab Emirates','Saudi Arabia','Qatar','Bahrain','Kuwait','Oman','Australia','New Zealand','Other'];
+    $industries = ['Insurance','Real Estate','Automotive','Home Services','Professional Services','Healthcare','Financial Services','Recruitment','Local Services','Restaurant / Hospitality','E-commerce','Technology / SaaS','Other'];
+    $companySizes = ['1','2-5','6-10','11-25','26-50','51-100','100+'];
+    $turnovers = ['Under 100K','100K - 500K','500K - 1M','1M - 5M','5M - 10M','10M+','Prefer Not To Say'];
+    $leadVolumes = ['0-25 Leads / Month','26-50 Leads / Month','51-100 Leads / Month','101-250 Leads / Month','251-500 Leads / Month','500+ Leads / Month','Not Sure'];
+    $crms = ['GoHighLevel','HubSpot','Salesforce','Zoho CRM','Pipedrive','Monday CRM','ServiceTitan','Housecall Pro','Jobber','Microsoft Dynamics','Custom CRM','Spreadsheets','No CRM','Other'];
+    $services = ['AI Voice Receptionist','Custom Inbound / Outbound AI Voice Agent','Conversation AI - Website Chat','Conversation AI - SMS & Email','AI Support Agent','AI Sales Agent','Lead Qualification','Lead Follow-Up Automation','Lead Reactivation','Appointment Booking Automation','Missed Call Automation','No-Show Follow-Up','Quote / Proposal Follow-Up','AI-Powered Website','A1LegacyStudio CRM','CRM & Pipeline Automation','Calendar & Appointment Management','Unified Conversations & Follow-Up','CRM Reporting & Operational Visibility','Lead Research & Sourcing Automation','Prospect Research','Custom AI Research Agent','Market / Competitor Research Automation','Data Collection & Enrichment Automation','CRM Data Cleanup & Organization','Workflow Automation','Pipeline Automation','Email / SMS Automation','Internal Notifications & Team Routing','Custom Integrations','n8n Automation','Repetitive Admin Automation','Sales Process Automation','Custom Business Automation','Specialised AI Assistant','Custom AI Solution','Not Sure Yet','Other'];
+    $challenges = ['Missing Calls / Leads','Slow Lead Response','Poor Follow-Up','Too Much Manual Admin','Low Appointment Booking','Lead Qualification Problems','CRM Is Disorganized','No CRM Currently','Sales Team Needs Automation','Customer Support Workload','Need AI Voice Agent','Need Website / Chat Automation','Need End-to-End Automation','Other'];
+    $timeZones = ['Europe/London'=>'UK — London','Europe/Dublin'=>'Ireland — Dublin','Europe/Berlin'=>'Central Europe — Berlin','Europe/Paris'=>'Western Europe — Paris','Europe/Istanbul'=>'Türkiye — Istanbul','Asia/Dubai'=>'UAE — Dubai / Abu Dhabi','Asia/Riyadh'=>'Saudi Arabia — Riyadh','Asia/Qatar'=>'Qatar — Doha','America/New_York'=>'USA / Canada — Eastern Time','America/Chicago'=>'USA / Canada — Central Time','America/Denver'=>'USA / Canada — Mountain Time','America/Los_Angeles'=>'USA / Canada — Pacific Time','Australia/Perth'=>'Australia — Perth','Australia/Sydney'=>'Australia — Sydney / Melbourne','Pacific/Auckland'=>'New Zealand — Auckland','UTC'=>'UTC','Other'=>'Other'];
+    $timelines = ['Immediately','Within 2 Weeks','Within 1 Month','1-3 Months','3+ Months','Just Researching','Not Sure Yet'];
+?>
+<section class="a1-consultation-section">
+    <style>
+        .a1-consultation-section{padding:88px 24px 112px;color:#f7fafc}.a1-consultation-head{width:min(780px,100%);margin:0 auto 34px;text-align:center}.a1-consultation-head h2{margin:15px 0 0;font-size:clamp(34px,5vw,56px);line-height:1.04;letter-spacing:-.05em;font-weight:600}.a1-consultation-head>p:last-child{max-width:680px;margin:16px auto 0;color:rgba(255,255,255,.47);font-size:13px;line-height:1.75}.a1-consultation-shell{width:min(1180px,100%);margin:0 auto;overflow:hidden;border:1px solid rgba(255,255,255,.08);border-radius:26px;background:linear-gradient(145deg,rgba(7,17,29,.96),rgba(3,8,14,.98));box-shadow:0 35px 110px rgba(0,0,0,.28)}.a1-consultation-grid{display:grid;grid-template-columns:360px minmax(0,1fr)}.a1-consultation-aside{position:relative;overflow:hidden;padding:42px 36px;border-right:1px solid rgba(255,255,255,.07);background:radial-gradient(circle at 20% 0%,rgba(47,143,255,.17),transparent 34%),#050d16}.a1-consultation-aside:after{content:"";position:absolute;width:280px;height:280px;right:-180px;bottom:-120px;border-radius:50%;background:rgba(47,143,255,.10);filter:blur(70px)}.a1-consultation-kicker{margin:0;color:#8fc5ff;font-family:"Geist Mono",monospace;font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}.a1-consultation-aside h2{margin:17px 0 0;font-size:34px;line-height:1.06;letter-spacing:-.045em;font-weight:600}.a1-consultation-aside>p{margin:17px 0 0;color:rgba(255,255,255,.47);font-size:13px;line-height:1.75}.a1-consultation-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}.a1-consultation-chip{border:1px solid rgba(158,203,255,.13);border-radius:999px;padding:8px 10px;background:rgba(47,143,255,.05);color:rgba(205,229,255,.65);font-size:10px}.a1-contact-details{display:grid;gap:18px;margin-top:38px;padding-top:28px;border-top:1px solid rgba(255,255,255,.07)}.a1-contact-details small{display:block;color:rgba(255,255,255,.28);font-family:"Geist Mono",monospace;font-size:8px;letter-spacing:.14em;text-transform:uppercase}.a1-contact-details span,.a1-contact-details a{display:block;margin-top:5px;color:rgba(255,255,255,.68);font-size:12px;line-height:1.55;text-decoration:none}.a1-contact-details a:hover{color:#fff}.a1-consultation-main{padding:40px}.a1-form-heading h3{margin:0;font-size:26px;letter-spacing:-.03em;font-weight:600}.a1-form-heading p{max-width:650px;margin:8px 0 0;color:rgba(255,255,255,.38);font-size:12px;line-height:1.65}.a1-form-section{margin-top:30px;padding-top:24px;border-top:1px solid rgba(255,255,255,.07)}.a1-form-section:first-of-type{margin-top:24px}.a1-form-section-title{margin:0 0 16px;color:#8fc5ff;font-family:"Geist Mono",monospace;font-size:9px;font-weight:600;letter-spacing:.16em;text-transform:uppercase}.a1-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.a1-form-field{min-width:0}.a1-form-full{grid-column:1/-1}.a1-form-field label{display:block;margin:0 0 7px;color:rgba(255,255,255,.72);font-size:11px;font-weight:600}.a1-req{color:#69adff}.a1-control{width:100%;min-height:46px;border:1px solid rgba(255,255,255,.10);border-radius:10px;padding:10px 12px;outline:0;background:#09131f;color:#f8fbff;font:inherit;font-size:12px;transition:.18s}.a1-control:hover{border-color:rgba(255,255,255,.18)}.a1-control:focus{border-color:#2f8fff;box-shadow:0 0 0 3px rgba(47,143,255,.11);background:#0b1725}.a1-control::placeholder{color:rgba(255,255,255,.23)}select.a1-control{appearance:auto}textarea.a1-control{min-height:112px;resize:vertical;line-height:1.6}.a1-other{display:none;margin-top:9px}.a1-other.is-visible{display:block}.a1-help{margin:6px 2px 0;color:rgba(255,255,255,.28);font-size:9px;line-height:1.5}.a1-field-error{margin-top:6px;color:#ff9f9f;font-size:10px}.a1-consent{display:flex;gap:10px;margin-top:24px;padding:14px;border:1px solid rgba(255,255,255,.08);border-radius:12px;background:rgba(255,255,255,.02)}.a1-consent input{width:17px;height:17px;margin-top:2px;accent-color:#2f8fff}.a1-consent label{color:rgba(255,255,255,.48);font-size:10px;line-height:1.55}.a1-submit{width:100%;min-height:50px;margin-top:18px;border:0;border-radius:11px;background:linear-gradient(135deg,#2f8fff,#1d6ed0);color:#fff;font:inherit;font-size:12px;font-weight:700;cursor:pointer;box-shadow:0 14px 32px rgba(47,143,255,.16);transition:.2s}.a1-submit:hover{transform:translateY(-1px);background:linear-gradient(135deg,#55a5ff,#2f8fff)}.a1-secure{margin-top:10px;text-align:center;color:rgba(255,255,255,.26);font-size:9px}.a1-success{margin-bottom:22px;border:1px solid rgba(85,220,166,.22);border-radius:12px;padding:14px 16px;background:rgba(54,194,139,.08);color:#a7edcf;font-size:12px}.a1-form-errors{margin-bottom:22px;border:1px solid rgba(239,103,103,.24);border-radius:12px;padding:14px 16px;background:rgba(239,103,103,.07);color:#ffb2b2;font-size:11px;line-height:1.6}
+        @media(max-width:960px){.a1-consultation-grid{grid-template-columns:1fr}.a1-consultation-aside{border-right:0;border-bottom:1px solid rgba(255,255,255,.07)}.a1-contact-details{grid-template-columns:repeat(3,minmax(0,1fr))}}
+        @media(max-width:700px){.a1-consultation-section{padding:68px 14px 82px}.a1-consultation-head{margin-bottom:26px}.a1-consultation-head h2{font-size:34px}.a1-consultation-shell{border-radius:20px}.a1-consultation-aside,.a1-consultation-main{padding:27px 20px}.a1-consultation-aside h2{font-size:30px}.a1-contact-details{grid-template-columns:1fr}.a1-form-grid{grid-template-columns:1fr}.a1-form-full{grid-column:auto}}
+    </style>
+
+    <div class="a1-consultation-head a1-section-heading">
+        <p class="a1-consultation-kicker">AI &amp; Automation Consultation</p>
+        <h2>Build a smarter <span style="color:#69adff">AI-powered business.</span></h2>
+        <p>Tell us where your business is today and what you want to automate. We’ll review your requirements and identify the right AI, CRM and automation approach.</p>
+    </div>
+
+    <div class="a1-consultation-shell">
+        <div class="a1-consultation-grid">
+            <aside class="a1-consultation-aside">
+                <div class="a1-consultation-chips"><span class="a1-consultation-chip">AI Voice Agents</span><span class="a1-consultation-chip">Conversation AI</span><span class="a1-consultation-chip">AI-Powered Websites</span><span class="a1-consultation-chip">A1LegacyStudio CRM</span><span class="a1-consultation-chip">Business Automation</span><span class="a1-consultation-chip">Custom AI Solutions</span></div>
+                <div class="a1-contact-details">
+                    <?php if($settings->get('contact_email')): ?><div><small>Email</small><a href="mailto:<?php echo e($settings->get('contact_email')); ?>"><?php echo e($settings->get('contact_email')); ?></a></div><?php endif; ?>
+                    <?php if($settings->get('contact_phone')): ?><div><small>Phone</small><span><?php echo e($settings->get('contact_phone')); ?></span></div><?php endif; ?>
+                    <?php if($settings->get('contact_address')): ?><div><small>Address</small><span><?php echo e($settings->get('contact_address')); ?></span></div><?php endif; ?>
+                </div>
+            </aside>
+
+            <div class="a1-consultation-main">
+                <?php if(session('success')): ?><div class="a1-success">✓ <?php echo e(session('success')); ?></div><?php endif; ?>
+                <?php if($errors->any()): ?><div class="a1-form-errors"><strong>Please review the highlighted fields.</strong><br><?php echo e($errors->first()); ?></div><?php endif; ?>
+                <div class="a1-form-heading"><h3><?php echo e($section->heading ?: 'AI & Automation Consultation'); ?></h3><p><?php echo e(strip_tags((string)($section->body ?: 'Complete this short form so our team can understand your business, current systems and automation priorities.'))); ?></p></div>
+
+                <form id="a1LegacyConsultationForm" name="A1-Legacy-AI-Automation-Consultation" method="POST" action="<?php echo e(route('contact.store')); ?>" novalidate>
+                    <?php echo csrf_field(); ?>
+                    <input type="text" name="website_check" value="" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0;pointer-events:none" aria-hidden="true">
+
+                    <div class="a1-form-section">
+                        <p class="a1-form-section-title">Your details</p>
+                        <div class="a1-form-grid">
+                            <div class="a1-form-field"><label for="first_name">First Name <span class="a1-req">*</span></label><input class="a1-control" id="first_name" name="first_name" value="<?php echo e(old('first_name')); ?>" autocomplete="given-name" required><?php $__errorArgs = ['first_name'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?><div class="a1-field-error"><?php echo e($message); ?></div><?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?></div>
+                            <div class="a1-form-field"><label for="last_name">Last Name <span class="a1-req">*</span></label><input class="a1-control" id="last_name" name="last_name" value="<?php echo e(old('last_name')); ?>" autocomplete="family-name" required><?php $__errorArgs = ['last_name'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?><div class="a1-field-error"><?php echo e($message); ?></div><?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?></div>
+                            <div class="a1-form-field"><label for="email">Business Email <span class="a1-req">*</span></label><input class="a1-control" id="email" type="email" name="email" value="<?php echo e(old('email')); ?>" placeholder="you@company.com" autocomplete="email" required><?php $__errorArgs = ['email'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?><div class="a1-field-error"><?php echo e($message); ?></div><?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?></div>
+                            <div class="a1-form-field"><label for="phone">Phone / WhatsApp <span class="a1-req">*</span></label><input class="a1-control" id="phone" name="phone" value="<?php echo e(old('phone')); ?>" placeholder="+44 7700 900000" autocomplete="tel" required><?php $__errorArgs = ['phone'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?><div class="a1-field-error"><?php echo e($message); ?></div><?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?></div>
+                            <div class="a1-form-field"><label for="company">Company Name <span class="a1-req">*</span></label><input class="a1-control" id="company" name="company" value="<?php echo e(old('company')); ?>" autocomplete="organization" required><?php $__errorArgs = ['company'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?><div class="a1-field-error"><?php echo e($message); ?></div><?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?></div>
+                            <div class="a1-form-field"><label for="website_url">Website</label><input class="a1-control" id="website_url" type="url" name="website_url" value="<?php echo e(old('website_url')); ?>" placeholder="https://yourcompany.com"><?php $__errorArgs = ['website_url'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?><div class="a1-field-error"><?php echo e($message); ?></div><?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?></div>
+                            <div class="a1-form-field"><label for="role">Your Role <span class="a1-req">*</span></label><select class="a1-control" id="role" name="role" data-other-target="role_other_wrap" required><option value="">Select your role</option><?php $__currentLoopData = $roles; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $option): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?><option value="<?php echo e($option); ?>" <?php if(old('role')===$option): echo 'selected'; endif; ?>><?php echo e($option); ?></option><?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?></select><div class="a1-other" id="role_other_wrap"><input class="a1-control" name="role_other" value="<?php echo e(old('role_other')); ?>" placeholder="Please enter your role"></div><?php $__errorArgs = ['role'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?><div class="a1-field-error"><?php echo e($message); ?></div><?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?> <?php $__errorArgs = ['role_other'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?><div class="a1-field-error"><?php echo e($message); ?></div><?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?></div>
+                            <div class="a1-form-field"><label for="decision_maker">Are You The Decision Maker? <span class="a1-req">*</span></label><select class="a1-control" id="decision_maker" name="decision_maker" required><option value="">Select an option</option><option value="Yes" <?php if(old('decision_maker')==='Yes'): echo 'selected'; endif; ?>>Yes</option><option value="No" <?php if(old('decision_maker')==='No'): echo 'selected'; endif; ?>>No</option></select><?php $__errorArgs = ['decision_maker'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?><div class="a1-field-error"><?php echo e($message); ?></div><?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?></div>
+                        </div>
+                    </div>
+
+                    <div class="a1-form-section">
+                        <p class="a1-form-section-title">Business profile</p>
+                        <div class="a1-form-grid">
+                            <div class="a1-form-field"><label for="country">Country <span class="a1-req">*</span></label><select class="a1-control" id="country" name="country" data-other-target="country_other_wrap" required><option value="">Select country</option><?php $__currentLoopData = $countries; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $option): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?><option value="<?php echo e($option); ?>" <?php if(old('country')===$option): echo 'selected'; endif; ?>><?php echo e($option); ?></option><?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?></select><div class="a1-other" id="country_other_wrap"><input class="a1-control" name="country_other" value="<?php echo e(old('country_other')); ?>" placeholder="Please enter your country"></div><?php $__errorArgs = ['country'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?><div class="a1-field-error"><?php echo e($message); ?></div><?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?> <?php $__errorArgs = ['country_other'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?><div class="a1-field-error"><?php echo e($message); ?></div><?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?></div>
+                            <div class="a1-form-field"><label for="industry">Industry <span class="a1-req">*</span></label><select class="a1-control" id="industry" name="industry" data-other-target="industry_other_wrap" required><option value="">Select industry</option><?php $__currentLoopData = $industries; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $option): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?><option value="<?php echo e($option); ?>" <?php if(old('industry')===$option): echo 'selected'; endif; ?>><?php echo e($option); ?></option><?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?></select><div class="a1-other" id="industry_other_wrap"><input class="a1-control" name="industry_other" value="<?php echo e(old('industry_other')); ?>" placeholder="Please enter your industry"></div><?php $__errorArgs = ['industry'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?><div class="a1-field-error"><?php echo e($message); ?></div><?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?> <?php $__errorArgs = ['industry_other'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?><div class="a1-field-error"><?php echo e($message); ?></div><?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?></div>
+                            <div class="a1-form-field"><label for="company_size">Company Size <span class="a1-req">*</span></label><select class="a1-control" id="company_size" name="company_size" required><option value="">Select company size</option><?php $__currentLoopData = $companySizes; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $option): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?><option value="<?php echo e($option); ?>" <?php if(old('company_size')===$option): echo 'selected'; endif; ?>><?php echo e($option); ?></option><?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?></select></div>
+                            <div class="a1-form-field"><label for="annual_turnover">Annual Turnover <span class="a1-req">*</span></label><select class="a1-control" id="annual_turnover" name="annual_turnover" required><option value="">Select annual turnover</option><?php $__currentLoopData = $turnovers; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $option): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?><option value="<?php echo e($option); ?>" <?php if(old('annual_turnover')===$option): echo 'selected'; endif; ?>><?php echo e($option); ?></option><?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?></select></div>
+                            <div class="a1-form-field"><label for="monthly_leads">Approximate Monthly Leads <span class="a1-req">*</span></label><select class="a1-control" id="monthly_leads" name="monthly_leads" required><option value="">Select monthly lead volume</option><?php $__currentLoopData = $leadVolumes; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $option): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?><option value="<?php echo e($option); ?>" <?php if(old('monthly_leads')===$option): echo 'selected'; endif; ?>><?php echo e($option); ?></option><?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?></select></div>
+                            <div class="a1-form-field"><label for="current_crm">Current CRM / Platform <span class="a1-req">*</span></label><select class="a1-control" id="current_crm" name="current_crm" data-other-target="current_crm_other_wrap" required><option value="">Select CRM / platform</option><?php $__currentLoopData = $crms; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $option): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?><option value="<?php echo e($option); ?>" <?php if(old('current_crm')===$option): echo 'selected'; endif; ?>><?php echo e($option); ?></option><?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?></select><div class="a1-other" id="current_crm_other_wrap"><input class="a1-control" name="current_crm_other" value="<?php echo e(old('current_crm_other')); ?>" placeholder="Please enter your CRM / platform"></div></div>
+                        </div>
+                    </div>
+
+                    <div class="a1-form-section">
+                        <p class="a1-form-section-title">Automation goals</p>
+                        <div class="a1-form-grid">
+                            <div class="a1-form-field a1-form-full"><label for="service_interest">What Do You Need Help With? <span class="a1-req">*</span></label><select class="a1-control" id="service_interest" name="service_interest" data-other-target="service_interest_other_wrap" required><option value="">Select service / solution</option><?php $__currentLoopData = $services; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $option): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?><option value="<?php echo e($option); ?>" <?php if(old('service_interest')===$option): echo 'selected'; endif; ?>><?php echo e($option); ?></option><?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?></select><div class="a1-other" id="service_interest_other_wrap"><input class="a1-control" name="service_interest_other" value="<?php echo e(old('service_interest_other')); ?>" placeholder="Please enter the service or solution you need"></div></div>
+                            <div class="a1-form-field a1-form-full"><label for="business_challenge">Main Business Challenge <span class="a1-req">*</span></label><select class="a1-control" id="business_challenge" name="business_challenge" data-other-target="business_challenge_other_wrap" required><option value="">Select main challenge</option><?php $__currentLoopData = $challenges; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $option): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?><option value="<?php echo e($option); ?>" <?php if(old('business_challenge')===$option): echo 'selected'; endif; ?>><?php echo e($option); ?></option><?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?></select><div class="a1-other" id="business_challenge_other_wrap"><input class="a1-control" name="business_challenge_other" value="<?php echo e(old('business_challenge_other')); ?>" placeholder="Please enter your main business challenge"></div></div>
+                        </div>
+                    </div>
+
+                    <div class="a1-form-section">
+                        <p class="a1-form-section-title">Project &amp; contact preferences</p>
+                        <div class="a1-form-grid">
+                            <div class="a1-form-field"><label for="preferred_contact_method">Preferred Contact Method <span class="a1-req">*</span></label><select class="a1-control" id="preferred_contact_method" name="preferred_contact_method" required><option value="">Select contact method</option><?php $__currentLoopData = ['WhatsApp','Phone Call','Email','Video Call']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $option): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?><option value="<?php echo e($option); ?>" <?php if(old('preferred_contact_method')===$option): echo 'selected'; endif; ?>><?php echo e($option); ?></option><?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?></select></div>
+                            <div class="a1-form-field"><label for="preferred_time_zone">Preferred Time Zone <span class="a1-req">*</span></label><select class="a1-control" id="preferred_time_zone" name="preferred_time_zone" data-other-target="preferred_time_zone_other_wrap" required><option value="">Select time zone</option><?php $__currentLoopData = $timeZones; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $value=>$label): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?><option value="<?php echo e($value); ?>" <?php if(old('preferred_time_zone')===$value): echo 'selected'; endif; ?>><?php echo e($label); ?></option><?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?></select><div class="a1-other" id="preferred_time_zone_other_wrap"><input class="a1-control" name="preferred_time_zone_other" value="<?php echo e(old('preferred_time_zone_other')); ?>" placeholder="Please enter your city, country or time zone"></div></div>
+                            <div class="a1-form-field a1-form-full"><label for="project_timeline">Project Timeline <span class="a1-req">*</span></label><select class="a1-control" id="project_timeline" name="project_timeline" required><option value="">Select project timeline</option><?php $__currentLoopData = $timelines; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $option): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?><option value="<?php echo e($option); ?>" <?php if(old('project_timeline')===$option): echo 'selected'; endif; ?>><?php echo e($option); ?></option><?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?></select></div>
+                            <div class="a1-form-field a1-form-full"><label for="message">Tell Us What You Want To Automate</label><textarea class="a1-control" id="message" name="message" placeholder="Tell us briefly what you want to automate, improve or replace..."><?php echo e(old('message')); ?></textarea><div class="a1-help">Please avoid entering passwords, API keys or other sensitive credentials.</div><?php $__errorArgs = ['message'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?><div class="a1-field-error"><?php echo e($message); ?></div><?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?></div>
+                        </div>
+                    </div>
+
+                    <div class="a1-consent"><input type="checkbox" id="contact_consent" name="contact_consent" value="1" <?php if(old('contact_consent')): echo 'checked'; endif; ?> required><label for="contact_consent">I agree to be contacted by A1 Legacy regarding my AI, CRM or automation enquiry.</label></div>
+                    <?php $__errorArgs = ['contact_consent'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?><div class="a1-field-error"><?php echo e($message); ?></div><?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>
+                    <button class="a1-submit" type="submit">Request My AI &amp; Automation Consultation</button>
+                    <div class="a1-secure">Your information is used only to review and respond to your business enquiry.</div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    (function(){
+        const form=document.getElementById('a1LegacyConsultationForm'); if(!form)return;
+        function sync(select){const target=document.getElementById(select.dataset.otherTarget||'');if(!target)return;const show=select.value==='Other';target.classList.toggle('is-visible',show);const input=target.querySelector('input');if(input)input.required=show;}
+        form.querySelectorAll('select[data-other-target]').forEach(function(select){select.addEventListener('change',function(){sync(select)});sync(select)});
+    })();
+    </script>
+</section>
+<?php /**PATH /home/u668568382/domains/a1legacylabs.com/laravel_app/resources/views/site/sections/contact.blade.php ENDPATH**/ ?>

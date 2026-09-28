@@ -1,0 +1,6 @@
+<div class="flex flex-wrap items-center justify-end gap-2">
+    <a href="<?php echo e(route('admin.pages.edit',$page)); ?>" class="rounded-lg border border-neutron-300/20 px-3 py-2 text-xs text-neutron-200">Edit</a>
+    <form method="POST" action="<?php echo e(route('admin.pages.toggle-published',$page)); ?>"><?php echo csrf_field(); ?><button class="rounded-lg border border-white/10 px-3 py-2 text-xs <?php echo e($page->is_published ? 'text-amber-200' : 'text-emerald-200'); ?>"><?php echo e($page->is_published ? 'Disable page' : 'Enable page'); ?></button></form>
+    <form method="POST" action="<?php echo e(route('admin.pages.toggle-navigation',$page)); ?>"><?php echo csrf_field(); ?><button class="rounded-lg border border-white/10 px-3 py-2 text-xs <?php echo e($page->show_in_navigation ? 'text-white/50' : 'text-neutron-200'); ?>"><?php echo e($page->show_in_navigation ? 'Hide tab' : 'Show tab'); ?></button></form>
+</div>
+<?php /**PATH E:\httracks\a1legacy\a1 complete\A1Legacy-Navigation-Industries-Headings-Responsive-Final\resources\views\admin\pages\actions.blade.php ENDPATH**/ ?>

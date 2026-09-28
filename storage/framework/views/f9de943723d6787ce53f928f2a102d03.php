@@ -1,0 +1,2 @@
+<?php echo $__env->make('site.page', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
+<?php /**PATH E:\httracks\a1legacy\a1 complete\A1Legacy-Navigation-Industries-Headings-Responsive-Final\resources\views\pages\contact.blade.php ENDPATH**/ ?>

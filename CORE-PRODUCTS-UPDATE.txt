@@ -1,0 +1,23 @@
+A1 Legacy - Core Products update
+
+What was added
+- Dynamic Home -> Core Products section sourced from the products table.
+- Individual public product detail pages at /products/{slug}.
+- Admin -> Core Products CRUD (create, edit, delete, active/home visibility, sort order).
+- Product image upload/replace/remove using the existing fileinfo-independent MediaStorage flow.
+- Admin-editable card highlights (one per line), e.g. Pipelines / Calendars / Automation / Reporting.
+- Admin-editable detail-page capability list.
+- Product images and highlights also appear on /products.
+
+Existing database
+Run:
+  php artisan migrate --seed
+  php artisan optimize:clear
+
+Fresh local database (deletes existing data)
+Run:
+  php artisan migrate:fresh --seed
+  php artisan optimize:clear
+
+Then edit products from:
+  /admin/products

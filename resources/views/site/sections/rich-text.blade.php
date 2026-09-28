@@ -1,0 +1,1 @@
+<section class="px-4 pb-28 sm:px-6"><div class="neutron-panel prose-a1 mx-auto max-w-4xl rounded-2xl p-6 text-base leading-8 text-white/60 sm:p-10">{!! \App\Support\RichText::render($section->body) !!}</div></section>

@@ -1,0 +1,19 @@
+A1 Legacy — Section Headings Centered Update
+
+Updated all main frontend section/page headings so they appear at the top of their section and are centered.
+
+Covered:
+- Generic CMS hero sections
+- Feature grid, FAQ, testimonials, pricing, stats, cards, gallery, standard content, split content
+- Industries showcase
+- Core Products
+- Client Stories
+- Gallery showcase
+- Contact consultation section
+- Products, Industries, Portfolio, Gallery, Client Stories index page headers
+- Product, Industry, Portfolio and Gallery detail page primary/major section headers
+- Blog article header
+
+Important:
+Card/item titles inside grids remain left-aligned where appropriate; only page/section-level headings are centered.
+Responsive behavior is preserved.

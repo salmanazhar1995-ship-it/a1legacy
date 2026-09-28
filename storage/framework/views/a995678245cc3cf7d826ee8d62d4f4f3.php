@@ -1,0 +1,24 @@
+<?php switch($section->type):
+    case ('business_showcase'): ?> <?php echo $__env->make('site.sections.business-showcase',['section'=>$section,'industries'=>$industries ?? collect()], array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?> <?php break; ?>
+    <?php case ('hero'): ?> <?php echo $__env->make('site.sections.hero',['section'=>$section,'isHome'=>($isHome ?? false),'settings'=>$settings ?? collect(),'platforms'=>$platforms ?? collect()], array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?> <?php break; ?>
+    <?php case ('logo_strip'): ?> <?php echo $__env->make('site.sections.logo-strip',['section'=>$section], array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?> <?php break; ?>
+    <?php case ('stats'): ?> <?php echo $__env->make('site.sections.stats',['section'=>$section], array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?> <?php break; ?>
+    <?php case ('feature_grid'): ?> <?php echo $__env->make('site.sections.feature-grid',['section'=>$section], array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?> <?php break; ?>
+    <?php case ('testimonials'): ?> <?php echo $__env->make('site.sections.testimonials',['section'=>$section], array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?> <?php break; ?>
+    <?php case ('pricing'): ?> <?php echo $__env->make('site.sections.pricing',['section'=>$section], array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?> <?php break; ?>
+    <?php case ('faq'): ?> <?php echo $__env->make('site.sections.faq',['section'=>$section], array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?> <?php break; ?>
+    <?php case ('cta'): ?> <?php echo $__env->make('site.sections.cta',['section'=>$section], array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?> <?php break; ?>
+    <?php case ('contact'): ?> <?php echo $__env->make('site.sections.contact',['section'=>$section,'settings'=>$settings ?? collect()], array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?> <?php break; ?>
+    <?php case ('changelog'): ?> <?php echo $__env->make('site.sections.changelog',['section'=>$section], array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?> <?php break; ?>
+    <?php case ('rich_text'): ?> <?php echo $__env->make('site.sections.rich-text',['section'=>$section], array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?> <?php break; ?>
+    <?php case ('standard_content'): ?> <?php echo $__env->make('site.sections.standard-content',['section'=>$section], array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?> <?php break; ?>
+    <?php case ('content'): ?> <?php echo $__env->make('site.sections.standard-content',['section'=>$section], array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?> <?php break; ?>
+    <?php case ('custom_content'): ?> <?php echo $__env->make('site.sections.standard-content',['section'=>$section], array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?> <?php break; ?>
+    <?php case ('split_content'): ?> <?php echo $__env->make('site.sections.split-content',['section'=>$section], array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?> <?php break; ?>
+    <?php case ('image_content'): ?> <?php echo $__env->make('site.sections.split-content',['section'=>$section], array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?> <?php break; ?>
+    <?php case ('cards_grid'): ?> <?php echo $__env->make('site.sections.cards-grid',['section'=>$section], array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?> <?php break; ?>
+    <?php case ('features_grid'): ?> <?php echo $__env->make('site.sections.cards-grid',['section'=>$section], array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?> <?php break; ?>
+    <?php case ('gallery_grid'): ?> <?php echo $__env->make('site.sections.gallery-grid',['section'=>$section], array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?> <?php break; ?>
+    <?php case ('video'): ?> <?php echo $__env->make('site.sections.video',['section'=>$section], array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?> <?php break; ?>
+<?php endswitch; ?>
+<?php /**PATH E:\httracks\a1legacy\a1 complete\A1Legacy-Navigation-Industries-Headings-Responsive-Final\resources\views\site\sections\renderer.blade.php ENDPATH**/ ?>

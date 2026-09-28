@@ -1,0 +1,66 @@
+A1 LEGACY LABS — ADMIN CMS + YAJRA UPDATE
+==========================================
+
+Implemented in this package:
+
+1. Yajra DataTables (server-side/AJAX)
+   - Pages
+   - Core Products
+   - Portfolio
+   - Gallery
+   - Client Stories
+   - Blog
+   - Contact Messages
+   - Users
+   - Search, sorting, pagination, status/action columns
+   - Admin-only JSON endpoints under /admin/data/*
+
+2. Flexible Page Sections
+   - Add a new section to a CMS page
+   - Edit sections
+   - Delete sections safely
+   - Enable/disable sections
+   - Move sections up/down
+   - Reusable section types and repeating Section Items
+   - Dynamic frontend section renderer
+   - Section image/background image support
+
+3. Admin Form UX
+   - CKEditor 5 automatically enhances long-form admin content fields
+   - FilePond automatically enhances admin image/video file inputs
+   - FilePond keeps normal multipart form submission (no fragile async temp upload dependency)
+   - Existing image preview/remove workflows are preserved
+   - Custom delete confirmation modal
+   - Unsaved changes warning
+   - Auto-slug/key helper
+   - Saving/loading states
+
+4. Upload compatibility
+   - Existing /media/... image delivery preserved
+   - Existing fileinfo-independent upload validation preserved
+   - No storage:link requirement introduced
+
+5. Frontend custom section rendering
+   - Standard content
+   - Split content + image
+   - Cards/features grids
+   - Stats/CTA/FAQ and existing types
+   - Gallery grid
+   - Video section
+   - Rich content
+
+Deployment (existing database):
+    php artisan migrate --force
+    php artisan db:seed --force
+    php artisan optimize:clear
+
+Do NOT use migrate:fresh on a live database.
+
+Validation completed for this build:
+- 139 PHP files passed php -l syntax validation.
+- Admin enhancement inline JavaScript passed node --check.
+- Tailwind CSS rebuilt directly with the Tailwind CLI (no Vite manifest required).
+- All actual <table> listings under resources/views/admin are now Yajra-enabled.
+
+Environment note:
+Full `php artisan route:list` could not be executed in the packaging environment because its PHP runtime does not include the PDO MySQL driver while this application boots database-backed site settings. This is an environment limitation; PHP route syntax was linted successfully.

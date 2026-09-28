@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A1 Legacy Industries CSV Import Fix</title>
+</head>
+<body style="font-family:Arial,sans-serif;line-height:1.6;max-width:900px;margin:40px auto;padding:0 20px;color:#111">
+<h1>A1 Legacy — Industries CSV Import Fix</h1>
+<p>The Industries bulk importer has been updated for Excel-exported files and the admin upload UI.</p>
+<ul>
+<li>Accepts comma-separated, tab-separated and semicolon-separated CSV content.</li>
+<li>Handles UTF-8, UTF-16 and Windows-1252 text so common Excel exports import safely.</li>
+<li>The CSV FilePond control now says “Drop CSV file” instead of “Drop image”.</li>
+<li>The admin page shows a clear maximum of 1,000 data rows per import.</li>
+<li>The existing 1,000-row server-side limit remains enforced.</li>
+</ul>
+<p><strong>Uploaded test file verified:</strong> 999 data rows, tab-separated headings, no malformed column rows.</p>
+<p><strong>Database migration:</strong> none required.</p>
+</body>
+</html>

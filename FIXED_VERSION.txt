@@ -1,0 +1,25 @@
+A1Legacy Complete Blog + Admin Build
+Date: 2026-09-22
+
+Included:
+- Frontend Blog tab and /blog listing page
+- Individual /blog/{slug} article pages
+- Admin Blog CRUD at /admin/blog
+- Blog title, slug, excerpt, content, author, publish scheduling, visibility and featured image management
+- Blog page navigation/SEO/hero editable through Pages & content
+- Blog migration and seed data
+- Existing Retell Ava voice integration preserved on the right
+- Existing LeadConnector chat integration preserved and positioned left
+- A1 Legacy brand badge: Powered by A1Legacy
+- Best-effort accessible Retell branding replacement plus official white-label-token support
+- Existing media/fileinfo-independent image handling preserved
+
+Industries CSV Import Update — 2026-09-26
+- Fixed admin industry bulk import for the supplied Excel/tab-separated .csv format.
+- Importer accepts comma, tab, and semicolon separated files.
+- UTF-8 BOM, UTF-16 LE/BE, Windows-1252, and UTF-8 input are normalised before parsing.
+- Basic headings supported: main_industry, sub_industry, detail.
+- Full template heading order remains supported.
+- Maximum 1,000 data rows per import; imports above 1,000 are rejected before saving.
+- Admin now shows the small note: “1,000 row file import in one time”.
+- FilePond admin label now says CSV / TSV instead of image for the industry import control.

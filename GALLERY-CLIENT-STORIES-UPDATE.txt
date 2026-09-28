@@ -1,0 +1,14 @@
+A1 Legacy Gallery + Client Stories + Product Repair
+
+Run on an existing database:
+  php artisan migrate
+  php artisan db:seed
+  php artisan optimize:clear
+
+Important:
+- Migration 2026_09_24_170000 repairs older products tables if image_url/highlights were marked migrated but are physically missing.
+- Gallery is fully dynamic from Admin > Gallery.
+- Client Stories are fully dynamic from Admin > Client Stories.
+- Client Stories publish only when Active AND Client approved public use are both enabled.
+- No fake client stories, metrics, quotes, or gallery projects are seeded.
+- Uploaded images and MP4/WebM videos use the custom /media route and do not require storage:link or PHP fileinfo.

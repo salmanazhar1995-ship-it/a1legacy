@@ -1,0 +1,2 @@
+<section class="px-4 pb-28 sm:px-6"><div class="neutron-panel prose-a1 mx-auto max-w-4xl rounded-2xl p-6 text-base leading-8 text-white/60 sm:p-10"><?php echo \App\Support\RichText::render($section->body); ?></div></section>
+<?php /**PATH /home/u668568382/domains/a1legacylabs.com/laravel_app/resources/views/site/sections/rich-text.blade.php ENDPATH**/ ?>

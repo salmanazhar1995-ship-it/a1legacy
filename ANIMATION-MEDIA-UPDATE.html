@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A1 Legacy — Admin Image / HTML Animation / ALT Update</title>
+<style>body{font-family:Arial,sans-serif;max-width:980px;margin:40px auto;padding:0 20px;background:#050d18;color:#eaf4ff;line-height:1.65}h1,h2{color:#9ecbff}code,pre{background:#0a1725;border:1px solid #20344b;border-radius:12px}code{padding:.15rem .4rem}pre{white-space:pre-wrap;padding:20px;overflow:auto}.ok{color:#b9f7d0}</style>
+</head>
+<body>
+<h1>A1 Legacy — Admin Visual Media Update</h1>
+<p class="ok"><strong>Completed:</strong> every actual image-upload location in the admin now uses the same Image / HTML Animation selector and includes editable Image ALT text.</p>
+<h2>Admin coverage</h2>
+<pre>Core Products
+Industries / Sub Industries
+Portfolio
+Gallery
+Blog featured media
+Dynamic Page sections — primary visual
+Dynamic Page sections — background visual
+Dynamic Page section items/cards
+Client Story video poster / thumbnail
+Site Settings media — logos, favicon and global/home content images</pre>
+<h2>Rules</h2>
+<pre>IMAGE MODE
+- JPG / PNG / WebP / AVIF
+- Max 5 MB
+- Image ALT text is required whenever an image is used
+- Existing legacy images receive an editable ALT fallback during migration
+
+HTML ANIMATION MODE
+- .html / .htm only (TXT is not accepted)
+- Max 5 MB
+- An HTML animation is required when HTML Animation mode is selected
+- Served through the existing /media route
+- Rendered in a sandboxed iframe
+
+NON-IMAGE UPLOADS
+- Client Story MP4/WebM video upload remains a video field
+- Industries CSV import remains a CSV field</pre>
+<h2>Industries CSV</h2>
+<p>The package root contains <code>INDUSTRIES-IMPORT-DEMO.csv</code>. The admin Industries page also provides a downloadable full CSV template. Keep the exact header order. Repeat the main-industry values on each sub-industry row.</p>
+<h2>Deployment</h2>
+<pre>php artisan migrate --force
+php artisan optimize:clear
+php artisan optimize</pre>
+<p>The new migration adds the remaining media metadata fields for Site Settings and Client Story poster media.</p>
+</body>
+</html>

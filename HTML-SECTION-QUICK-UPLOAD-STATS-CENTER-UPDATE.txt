@@ -1,0 +1,20 @@
+A1 Legacy update
+
+1. Add Section admin page now has a dedicated right-side HTML Section uploader.
+   - Upload .html/.htm
+   - Submit once
+   - A new enabled html_section record is created automatically at the end of the page
+   - The section key is generated from the filename and made unique automatically
+   - This is separate from HTML animation/media uploads
+
+2. Uploaded HTML sections keep their embedded CSS/JavaScript in the sandboxed iframe.
+   A viewport/responsive guard and automatic height bridge are added when stored.
+
+3. Stats cards now use a centered wrapping layout.
+   - 1 column on phones
+   - 2 on small screens
+   - 3 on large screens
+   - 4 on extra-large screens
+   - incomplete final rows are centered (for example 7 cards render 4 + centered 3)
+
+No database migration or seeder is required for these changes.

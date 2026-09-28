@@ -1,0 +1,32 @@
+A1 Legacy Labs — Portfolio + Branding Update
+
+Added
+- Dynamic public Portfolio page: /portfolio
+- Dynamic portfolio detail pages: /portfolio/{slug}
+- Backward redirect: /project-portfolio -> /portfolio
+- Admin Portfolio CRUD: /admin/portfolio
+- Portfolio image upload/replace/remove
+- Dynamic category, client, project date, summary, overview, challenge, solution, outcome, highlights, technologies and external URL
+- Portfolio migration + starter PortfolioSeeder
+- Seeder migration logic hides the old duplicate project-portfolio navigation page when both exist
+
+Branding fixes
+- Site name seeded as A1 Legacy Labs
+- Admin sidebar uses the dynamic Header Logo setting
+- Admin/mobile dashboard loads dynamic Header Logo
+- Login/guest layout loads dynamic Header Logo
+- Login/admin favicon loads from the dynamic Favicon setting
+- Default bundled A1 Legacy Labs logo/favicon are seeded only when branding image values are empty
+- Existing custom uploaded logos are preserved
+
+Recommended existing/live database commands
+php artisan migrate --force
+php artisan db:seed --force
+php artisan optimize:clear
+
+Local development
+php artisan migrate --seed
+php artisan optimize:clear
+php artisan serve
+
+Do not use migrate:fresh on a live database unless you intentionally want to delete all existing data.

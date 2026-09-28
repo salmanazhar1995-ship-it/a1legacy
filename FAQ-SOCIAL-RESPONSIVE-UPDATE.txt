@@ -1,0 +1,29 @@
+A1 LEGACY — FAQ + SOCIAL UPDATE
+================================
+
+Updated from the previous Industries / Navbar / Contact CMS package.
+
+1. FAQ layout
+- FAQ eyebrow and heading are now at the TOP and CENTER of the section.
+- Optional FAQ section body copy is also centered.
+- FAQs now display TWO per row on tablet/desktop (md+).
+- FAQs collapse to ONE per row on mobile for clean responsive behavior.
+- Accordion cards remain individually expandable.
+
+2. Social icons
+Footer now displays dynamic social icon buttons for:
+- Facebook: https://www.facebook.com/A1LegacyAI/
+- LinkedIn: https://www.linkedin.com/company/a1-legacy
+- Instagram: https://www.instagram.com/a1legacylabs/
+- Threads: https://www.threads.com/@a1legacylabs
+
+3. Dynamic admin editing
+Admin > Site Settings > Social contains editable URL fields for all four social profiles.
+The footer reads these values directly from the database, so changing a URL in admin updates the website without code changes.
+
+4. Existing database upgrade
+Run:
+php artisan migrate --force
+php artisan optimize:clear
+
+Migration 2026_09_25_162000_add_a1legacy_social_links.php adds/updates the four social URLs and removes the old unused GitHub/X social settings.

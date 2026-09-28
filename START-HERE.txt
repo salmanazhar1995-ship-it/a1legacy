@@ -1,0 +1,52 @@
+A1 LEGACY - BLOG + AI AGENTS COMPLETE BUILD
+===========================================
+
+IMPORTANT: Extract this ZIP into a NEW empty folder. Do not run an older project folder.
+
+Local setup (Windows):
+1. Open the extracted A1Legacy-Complete-Blog-Admin folder.
+2. Keep/copy your correct DB_* credentials into .env.
+3. Open CMD in this folder.
+4. Existing database:
+       php artisan migrate --seed
+   Fresh local database only:
+       php artisan migrate:fresh --seed
+5. Clear caches:
+       php artisan optimize:clear
+6. Start Laravel:
+       php artisan serve
+7. Open:
+       http://127.0.0.1:8000
+
+BLOG
+----
+Frontend:
+    /blog
+    /blog/{post-slug}
+
+Admin:
+    /admin/blog
+
+The admin can create, edit, publish/schedule, unpublish and delete blog posts,
+set title/slug/excerpt/content/author/date, and upload a featured image.
+The Blog tab itself is controlled by the CMS page record and can be edited under
+Admin > Pages & content > Blog (navigation label, visibility, SEO, hero text).
+
+AI WIDGETS
+----------
+LeadConnector chat uses the native widget and is positioned on the LEFT.
+Retell Ava voice uses the native widget and remains on the RIGHT.
+The site renders the A1 Legacy branding badge as "Powered by A1Legacy".
+The project also attempts to replace accessible "Powered by Retell" text with
+"Powered by A1Legacy". If Retell renders provider attribution inside a protected
+cross-origin iframe, the official RETELL_WHITE_LABEL_TOKEN is required to remove
+that provider-side attribution reliably.
+
+Do not use migrate:fresh on a live database unless you intentionally want to delete all data.
+
+2026-09-25 RESPONSIVE + BUSINESS FIT UPDATE
+- Stats/operating-model cards are now responsive with no blank grey final cell.
+- Platform Strip is a complete CRUD: Add/Edit/Delete/Hide/Order with no four-record add lock.
+- New Admin -> Business Fit CRUD controls the homepage "See exactly where AI fits" section.
+- Business Fit uses Yajra DataTables, FilePond image uploads, CKEditor content and repeatable AI-fit points.
+- Run: php artisan migrate --seed && php artisan optimize:clear

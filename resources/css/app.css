@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    [x-cloak] {
+        display: none !important;
+    }
+
+    body {
+        @apply bg-neutron-950 text-white antialiased;
+    }
+
+    ::selection {
+        @apply bg-neutron-500 text-white;
+    }
+}
+
+@layer components {
+    .neutron-grid {
+        background-image:
+            linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+        background-size: 48px 48px;
+    }
+
+    .neutron-panel {
+        @apply border border-white/10 bg-white/[0.035] backdrop-blur-xl;
+    }
+
+    .neutron-kicker {
+        @apply font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-neutron-300;
+    }
+
+    .neutron-link {
+        @apply text-sm text-white/55 underline decoration-white/20 underline-offset-4 transition hover:text-white;
+    }
+
+    .a1-section-heading {
+        @apply mx-auto max-w-3xl text-center;
+    }
+
+    .a1-section-heading .neutron-kicker,
+    .a1-page-heading .neutron-kicker {
+        @apply text-center;
+    }
+
+    .a1-section-heading .prose-a1,
+    .a1-page-heading .prose-a1 {
+        @apply mx-auto;
+    }
+
+    .a1-page-heading {
+        @apply mx-auto max-w-4xl text-center;
+    }
+
+    .auth-panel .text-gray-600,
+    .auth-panel .text-gray-700,
+    .auth-panel .text-gray-800,
+    .auth-panel .text-gray-900 {
+        @apply text-white/50;
+    }
+
+    .auth-panel a {
+        @apply text-white/55 decoration-white/20 underline-offset-4 hover:text-white;
+    }
+
+    .auth-panel input[type='checkbox'] {
+        @apply rounded border-white/15 bg-white/5 text-neutron-500 focus:ring-neutron-500 focus:ring-offset-neutron-950;
+    }
+
+    .profile-panel .text-gray-600,
+    .profile-panel .text-gray-700,
+    .profile-panel .text-gray-800 {
+        @apply text-white/45;
+    }
+
+    .profile-panel .text-gray-900 {
+        @apply text-white;
+    }
+}
+
+@layer components {
+    .prose-a1 p { margin-top: 0.85rem; }
+    .prose-a1 p:first-child { margin-top: 0; }
+    .prose-a1 h2,
+    .prose-a1 h3,
+    .prose-a1 h4,
+    .prose-a1 h5,
+    .prose-a1 h6 { margin-top: 1.5rem; margin-bottom: .55rem; color: rgb(255 255 255); font-weight: 600; line-height: 1.25; }
+    .prose-a1 h2 { font-size: 1.65rem; }
+    .prose-a1 h3 { font-size: 1.35rem; }
+    .prose-a1 ul,
+    .prose-a1 ol { margin-top: .9rem; padding-left: 1.25rem; }
+    .prose-a1 ul { list-style: disc; }
+    .prose-a1 ol { list-style: decimal; }
+    .prose-a1 li { margin-top: .4rem; }
+    .prose-a1 a { color: #9ecbff; text-decoration: underline; text-underline-offset: 3px; }
+    .prose-a1 blockquote { margin-top: 1rem; border-left: 2px solid rgba(158,203,255,.35); padding-left: 1rem; color: rgba(255,255,255,.68); }
+    .prose-a1 table { margin-top: 1rem; width: 100%; border-collapse: collapse; }
+    .prose-a1 th,
+    .prose-a1 td { border: 1px solid rgba(255,255,255,.10); padding: .65rem .75rem; text-align: left; }
+}
